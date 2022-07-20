@@ -1,6 +1,10 @@
 # Twin-Adversarial-Contrastive-Learning-for-Underwater-Image-Enhancement-and-Beyond
-This is an implement of **“Twin-Adversarial-Contrastive-Learning-for-Underwater-Image-Enhancement-and-Beyond”**,
-Risheng Liu*, Zhiying Jiang, Shuzhou Yang, Xin Fan.
+This is an implement of the TACL,
+**“[Twin-Adversarial-Contrastive-Learning-for-Underwater-Image-Enhancement-and-Beyond](https://ieeexplore.ieee.org/document/9832540)”**, 
+Risheng Liu*, Zhiying Jiang, Shuzhou Yang, Xin Fan, IEEE Transactions on Image Processing __(TIP)__, 2022.
+
+## Overview
+![avatar](Overview.PNG)
 
 ## Prerequisites
 - Linux or macOS
