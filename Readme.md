@@ -30,6 +30,6 @@ python test.py --dataroot ./datasets/[YOUR-DATASETS] --name underwater --model c
 Results will be shown in _results_ folder.
 
 ## Contact
-Should you have any question, please contact [Shuzhou Yang].
+Should you have any question, please contact [Zhiying Jiang].
 
-[Shuzhou Yang]:yszdyx@gmail.com
+[Zhiying Jiang]:zyjiang0630@gmail.com
