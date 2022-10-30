@@ -19,14 +19,14 @@ pip install -r requirements.txt
 
 ## Download
 Download the pre-trained model and put it in _./checkpoints_
-- [Google Drive](https://drive.google.com/file/d/1MQkXjzEFYubDsc7aBhAmX7FjcvHnvZ2D/view?usp=sharing)
+- [Google Drive](https://drive.google.com/file/d/1GWJISAsdlvYsthyvke_RxH70B4miWysM/view?usp=sharing)
 
 ## Quick Run
 Put the images you want to process in the _./datasets_ folder. \
 To test the pre-trained models for Underwater Enhancement on your own images, run
-​```
+```bash
 python test.py --dataroot ./datasets/[YOUR-DATASETS] --name underwater --model cycle_gan
-​``` \
+```
 Results will be shown in _results_ folder.
 
 ## Contact
