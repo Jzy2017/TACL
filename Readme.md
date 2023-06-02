@@ -19,7 +19,12 @@ pip install -r requirements.txt
 
 ## Download
 Download the pre-trained model and put it in _./checkpoints_
-- [Google Drive](https://drive.google.com/file/d/1GWJISAsdlvYsthyvke_RxH70B4miWysM/view?usp=sharing)
+- [Google Drive](https://drive.google.com/file/d/1VEx7CR0iFJNesCS_Ci98CEAaFhhzsela/view?usp=sharing)
+- [Baidu Yun](https://pan.baidu.com/s/1WZ79-GbJEoJkNDMrgVBtVw) \
+code:
+​```
+YSZD
+​```
 
 ## Quick Run
 Put the images you want to process in the _./datasets_ folder. \
@@ -28,6 +33,63 @@ To test the pre-trained models for Underwater Enhancement on your own images, ru
 python test.py --dataroot ./datasets/[YOUR-DATASETS] --name underwater --model cycle_gan
 ```
 Results will be shown in _results_ folder.
+
+## Train Backbone
+- First, you need to train a base backbone:
+```bash
+python train.py --dataroot ./datasets/[YOUR-DATASETS] --name chinamm_train --model cycle_gan
+```
+
+## Training TAF
+- Second, you need to train a TAF module (here we adopt SSD): \
+  * Download an Underwater Detection Dataset (**[Chinamm](https://rwenqi.github.io/chinaMM2019uw/)**).
+  * Run this to make Chinamm in VOC format:
+  ```bash
+  python makeTXT.py
+  ```
+  * Use the trained backbone to enhance JPEGImages of chinamm.
+  * cd ./ssd.pytorch-master
+
+- Download the fc-reduced [VGG-16](https://arxiv.org/abs/1409.1556) PyTorch base network weights at:              https://s3.amazonaws.com/amdegroot-models/vgg16_reducedfc.pth
+- By default, we assume you have downloaded the file in the `ssd.pytorch/weights` dir:
+
+```Shell
+mkdir weights
+cd weights
+wget https://s3.amazonaws.com/amdegroot-models/vgg16_reducedfc.pth
+```
+
+- To train SSD using the train script simply specify the parameters listed in `train.py` as a flag or manually change them.
+
+```Shell
+python train.py
+```
+
+- Note:
+  * For training, an NVIDIA GPU is strongly recommended for speed.
+  * For instructions on Visdom usage/installation, see the <a href='#installation'>Installation</a> section.
+  * You can pick-up training from a checkpoint by specifying the path as one of the training parameters (again, see `train.py` for options)
+
+- Evaluation
+To evaluate a trained network:
+
+```Shell
+python eval.py
+```
+
+You can specify the parameters listed in the `eval.py` file by flagging them or manually changing them.  
+
+## Training
+cd ./ssd.pytorch-master \
+Run
+```Shell
+python trainall.py
+```
+- Test final version:
+```Shell
+python visual.py
+```
+
 
 ## Contact
 Should you have any question, please contact [Zhiying Jiang].
