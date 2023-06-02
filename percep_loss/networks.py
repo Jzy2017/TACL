@@ -726,6 +726,7 @@ class VGGLoss1(nn.Module):
         self.criterion = nn.L1Loss()
         # self.weights = weights or [1.0 / 2.6, 1.0 / 4.8]
         # self.indices = indices or [2, 7]
+        
         self.weights = weights or [1.0 / 32., 1.0 / 16., 1.0 / 8., 1.0 / 4., 1.]
         self.indices = indices or [1, 3, 5, 9, 13]
         self.device = device
@@ -736,9 +737,9 @@ class VGGLoss1(nn.Module):
         print("Vgg: Weights: ", self.weights, " indices: ", self.indices, " normalize: ", self.normalize)
 
     def __call__(self, x, y):
-        if self.normalize is not None:
-            x = self.normalize(x)
-            y = self.normalize(y)
+        # if self.normalize is not None:
+        #     x = self.normalize(x)
+        #     y = self.normalize(y)
         x_vgg, y_vgg = self.vgg(x, self.indices), self.vgg(y, self.indices)
         loss = 0
         for i in range(len(x_vgg)):
