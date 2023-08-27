@@ -11,13 +11,13 @@ Risheng Liu*, Zhiying Jiang, Shuzhou Yang, Xin Fan, IEEE Transactions on Image P
 - Python 3
 - CPU or NVIDIA GPU + CUDA CuDNN
 
-## Installation
+## 🔑 Installation
 Type the command:
 ```
 pip install -r requirements.txt
 ```
 
-## Download
+## 🧩 Download
 Download the pre-trained model and put it in _./checkpoints_
 - [Google Drive](https://drive.google.com/file/d/1VEx7CR0iFJNesCS_Ci98CEAaFhhzsela/view?usp=sharing)
 - [Baidu Yun](https://pan.baidu.com/s/1WZ79-GbJEoJkNDMrgVBtVw) \
@@ -26,21 +26,21 @@ code:
 YSZD
 ​```
 
-## Quick Run
-Put the images you want to process in the _./datasets_ folder. \
-To test the pre-trained models for Underwater Enhancement on your own images, run
+## 🚀 Quick Run
+- Create directories `./dataset/testA` and `./dataset/testB`. Put your test images in `./dataset/testA` (And you should keep whatever one image in `./dataset/testB` to make sure program can start.)
+- To test the pre-trained models for Underwater Enhancement on your own images, run
 ```bash
 python test.py --dataroot ./datasets/[YOUR-DATASETS] --name underwater --model cycle_gan
 ```
 Results will be shown in _results_ folder.
 
-## Train Backbone
+## 🧩 Train Backbone
 - First, you need to train a base backbone:
 ```bash
 python train.py --dataroot ./datasets/[YOUR-DATASETS] --name chinamm_train --model cycle_gan
 ```
 
-## Training TAF
+## 🧩 Training TAF
 - Second, you need to train a TAF module (here we adopt SSD): \
   * Download an Underwater Detection Dataset (**[Chinamm](https://rwenqi.github.io/chinaMM2019uw/)**).
   * Run this to make Chinamm in VOC format:
@@ -79,7 +79,7 @@ python eval.py
 
 You can specify the parameters listed in the `eval.py` file by flagging them or manually changing them.  
 
-## Training
+## 🧩 Training
 cd ./ssd.pytorch-master \
 Run
 ```Shell
@@ -91,7 +91,7 @@ python visual.py
 ```
 
 
-## Contact
+## 📌 Contact
 Should you have any question, please contact [Zhiying Jiang].
 
 [Zhiying Jiang]:zyjiang0630@gmail.com
