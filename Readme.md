@@ -41,7 +41,7 @@ python train.py --dataroot ./datasets/[YOUR-DATASETS] --name chinamm_train --mod
 ```
 
 ## Training TAF
-- Second, you need to train a TAF module (here we adopt SSD): \
+- Second, you need to train a TAF module (here we adopt SSD): 
   * Download an Underwater Detection Dataset (**[Chinamm](https://rwenqi.github.io/chinaMM2019uw/)**).
   * Run this to make Chinamm in VOC format:
   ```bash
