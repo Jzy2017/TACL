@@ -91,7 +91,18 @@ python visual.py
 ```
 
 
-## 📌 Contact
-Should you have any question, please contact [Zhiying Jiang].
+## 📌 Citation
 
-[Zhiying Jiang]:zyjiang0630@gmail.com
+If you find this code useful for your research, please use the following BibTeX entry.
+
+```bibtex
+@ARTICLE{9832540,
+  author={Liu, Risheng and Jiang, Zhiying and Yang, Shuzhou and Fan, Xin},
+  journal={IEEE Transactions on Image Processing}, 
+  title={Twin Adversarial Contrastive Learning for Underwater Image Enhancement and Beyond}, 
+  year={2022},
+  volume={31},
+  number={},
+  pages={4922-4936},
+  doi={10.1109/TIP.2022.3190209}}
+```
